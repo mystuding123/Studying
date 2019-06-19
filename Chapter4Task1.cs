@@ -6,8 +6,7 @@ namespace Chapter4Task1
     {
         static void Main(string[] args)
         {
-            double num;
-      
+            double num;     
             Console.WriteLine("Select number");
             String myStr = Console.ReadLine();;
             bool result = double.TryParse(myStr, out num);
@@ -15,9 +14,7 @@ namespace Chapter4Task1
                 Console.WriteLine(Math.Pow(num,5));
             else
                 Console.WriteLine("false");
-            Console.ReadLine();
-                   
-            
+            Console.ReadLine();       
         }
     }
 }
