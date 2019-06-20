@@ -24,8 +24,6 @@ namespace Chapter4Tas2
             Swap(ref a, ref b);
             Console.WriteLine("After: {0}, {1}", a, b);
             Console.ReadLine();
-
-
         }
     }
 }
