@@ -1,4 +1,5 @@
 ﻿using System;
+//3. Написати окремий метод, який знаходить суму бідь якої кількості чисел(використайparams)
 
 namespace Сhapter4Task3
 {
@@ -10,7 +11,10 @@ namespace Сhapter4Task3
 
             int sum = 0;
             for (int a = 0; a < numbers.Length; a++)
-                sum += numbers[a];
+            {
+                //sum += numbers[a];
+                sum = sum + numbers[a];
+            }
 
             return sum;
 
