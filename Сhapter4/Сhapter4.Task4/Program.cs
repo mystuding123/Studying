@@ -7,6 +7,18 @@ namespace Сhapter4.Task4
     {
         static int Add(int a, int b)
         {
+            int sum = a + b;
+
+            return sum;
+        }
+        static string Add(string firstStr, string secondStr)
+        {
+            string sum = firstStr + secondStr;
+
+            return sum;
+        }
+        static void Main(string[] args)
+        {
             Console.WriteLine("Enter first number");
             string firstInt = Console.ReadLine();
             int i = int.Parse(firstInt);
@@ -15,28 +27,16 @@ namespace Сhapter4.Task4
             string secondInt = Console.ReadLine();
             int n = int.Parse(secondInt);
 
-            int sum = i + n;
+            Console.WriteLine(Add(i, n));
 
-            return sum;
-        }
-        static string Add(string firstStr, string secondStr)
-        {
             Console.WriteLine("Enrter first string");
             string firstString = Console.ReadLine();
 
             Console.WriteLine("Enter second string");
             string secondString = Console.ReadLine();
 
-            string sum = firstString + secondString;
-            return sum;
-        }
+            Console.WriteLine(Add(firstString, secondString));
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(Add(1,2));
-            Console.ReadLine();
-
-            Console.WriteLine(Add(firstStr:" ", secondStr:" " ));
             Console.ReadLine();
         }
         
