@@ -13,6 +13,7 @@ namespace Chapter4.Task8
             Blue = 5,
             Red = 6,
             Cyan = 7,
+        }
         static void EvaluateEnum(System.Enum e)
         {
             Array enumData = Enum.GetValues(e.GetType());
