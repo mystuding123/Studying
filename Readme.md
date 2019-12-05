@@ -1,4 +1,4 @@
-** #This is studying project.
+#This is studying project.
 
 ***Task should be commented with this description.***
 
