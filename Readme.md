@@ -1,8 +1,8 @@
-**#This is studying project.
+** #This is studying project.
 
 ***Task should be commented with this description.***
 
-##Workflow:
+## Workflow:
 
 1.   For new chapter create folder and solution named `"Chapter#"` (e.g. Chapter3, Chapter4).
 
