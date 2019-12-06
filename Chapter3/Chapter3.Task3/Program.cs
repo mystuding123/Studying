@@ -6,9 +6,14 @@ namespace SchoolBox.Task3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int num1 = 10, num2 = 2;
+            Console.WriteLine("Enter first number");
+            string firstStr = Console.ReadLine();
+            int num1 = int.Parse(firstStr);
 
+            Console.WriteLine("Enter second number");
+            string secondStr = Console.ReadLine();
+            int num2 = int.Parse(secondStr);
+         
             string formatString1 = string.Format("{0}+{1}={2}", num1, num2, num1 + num2);
             Console.WriteLine(formatString1);
 
