@@ -1,5 +1,5 @@
 ﻿using System;
-
+7. Зчитати стрічку з екрану, якщо ввели B - вивести BMW, якщо M - Mersedess, W - Wolzvagen інакше вивести unknown car(використовуй switch -case)
 namespace SchoolBox.task7
 {
     class Program
