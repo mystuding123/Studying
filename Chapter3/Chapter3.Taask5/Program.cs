@@ -13,7 +13,6 @@ namespace Chapter3.Taask5
             for (int a = 1; a < firstNum; a++)
                 Console.WriteLine(a);
 
-
             Console.WriteLine("My number 2");
             string secondString = Console.ReadLine();
             int secondNum = int.Parse(secondString);
@@ -50,7 +49,6 @@ namespace Chapter3.Taask5
             {
                 m++;
                 Console.WriteLine("Numbers{0}", m);
-
             }
 
             while (m < fourNum);
