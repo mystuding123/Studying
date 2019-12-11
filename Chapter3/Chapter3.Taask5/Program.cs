@@ -1,6 +1,6 @@
 ﻿using System;
 //. Зчитати число з екрану, використовуючи цикли(for/ foreach/while/do-while) вивести числа від одного до заданого
-namespace Chapter3.Taask5
+namespace Chapter3.Task5
 {
     class Program
     {
