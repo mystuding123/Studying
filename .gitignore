@@ -8,6 +8,6 @@ packages
 Сhapter4/.vs/Сhapter4/DesignTimeBuild/.dtbcache
 *.ide-wal
 *.ide-shm
-*.dtbcache
-*.storage.ide
-*.dblock
+Chapter3/.vs/Chapter3/DesignTimeBuild/.dtbcache
+Chapter3/.vs/Chapter3/v16/Server/sqlite3/db.lock
+Chapter3/.vs/Chapter3/v16/Server/sqlite3/storage.ide
