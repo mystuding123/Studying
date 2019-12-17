@@ -1,29 +1,31 @@
 ﻿using System;
-7. Зчитати стрічку з екрану, якщо ввели B - вивести BMW, якщо M - Mersedess, W - Wolzvagen інакше вивести unknown car(використовуй switch -case)
-namespace SchoolBox.task7
+//7. Зчитати стрічку з екрану, якщо ввели B - вивести BMW, якщо M - Mersedess, W - Wolzvagen інакше вивести unknown car(використовуй switch -case)
+namespace SchoolBox.task6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            string myString;
+            Console.WriteLine("Type of cars: B=BMW, M=Mercedess, W=Wolcwagen");
+            Console.WriteLine("Please enter your selection: ");
+            string myString = Console.ReadLine();
 
-            Console.WriteLine("Enter the pass");
-            myString = Console.ReadLine();
-
-            if (myString.Length < 5)
+            switch (myString)
             {
-                Console.WriteLine("5");
+                case "B":
+                    Console.WriteLine("BMW");
+                    break;
+                case "M":
+                    Console.WriteLine("Mercedess");
+                    break;
+                case "W":
+                    Console.WriteLine("Wolcvagen");
+                    break;
+                default:
+                    Console.WriteLine("unknown car");
+                    break;
             }
-            else if ((myString.Length >= 5) && (myString.Length <= 10))
-            {
-                Console.WriteLine("10");
-            }
-            else if (myString.Length > 10)
-            {
-                Console.WriteLine(11);
-            }
+            Console.WriteLine("Thank You");
 
             Console.ReadLine();
         }
