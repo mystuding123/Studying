@@ -17,7 +17,7 @@ namespace MatrixMultiplication
             }
 
         }
-        static void MultiplyMatrices(int[,] firstMatrix, int [,] secondMatrix, int firstRows, int firstColums, int secondRows, int secondColums, int k = 0)
+        static void MultiplyMatrices(int[,] firstMatrix,int firstRows, int firstColums, int [,] secondMatrix, int secondRows, int secondColums)
         {
 
         }
