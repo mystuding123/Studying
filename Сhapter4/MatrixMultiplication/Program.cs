@@ -4,9 +4,9 @@ namespace MatrixMultiplication
 {
     class Program
     {
-        static void WriteMatrix(int[,] matNumOne, int numLenghts , int numColums)
+        static void WriteMatrix(int[,] matNumOne, int numRows , int numColums)
         {
-            for(int i = 0; i < numLenghts; i++)
+            for(int i = 0; i < numRows; i++)
             {
                 for(int j = 0; j < numColums; j++)
                 {
@@ -19,50 +19,38 @@ namespace MatrixMultiplication
         }
         static void Main(string[] args)
         {
-            int numLenghts = 5;
-            int numColums = 1;
-            int[,] matNumOne = new int[numLenghts, numColums];
+            int numRowsOne = 5;
+            int numColumsOne = 1;
+            int[,] matNumOne = new int[numRowsOne, numColumsOne];
             matNumOne[0, 0] = 5;
             matNumOne[1, 0] = 2;
             matNumOne[2, 0] = 4;
             matNumOne[3, 0] = 7;
             matNumOne[4, 0] = 0;
 
-            WriteMatrix(matNumOne, numLenghts, numColums);
+            WriteMatrix(matNumOne, numRowsOne, numColumsOne);
 
-
-
-
+            int numRowsTwo = 1;
+            int numColumsTwo = 3;
             int[,] matNumTwo = new int[1, 3];
             matNumTwo[0, 0] = 3;
             matNumTwo[0, 1] = 1;
             matNumTwo[0, 2] = 9;
 
-            for (int i = 0; i < 1; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(matNumTwo[i, j]);
-                }
+            WriteMatrix(matNumTwo, numRowsTwo, numColumsTwo);
 
-                Console.WriteLine();
-            }
-
+            int numRowsThree = 2;
+            int numColumsThree = 3;
             int[,] matNumTree =
             {
                 {1, 2, 3 },
                 { 4, 5, 6}
             };
 
-            for (int i = 0; i < 2; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(matNumTree[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(matNumTree, numRowsThree, numColumsThree);
 
+            int numRowsFour = 3;
+            int numColumnFour = 4;
             int[,] matNumFour =
             {
                 {3, 2, 4, 8 },
@@ -70,15 +58,10 @@ namespace MatrixMultiplication
                 {1, 6, 8, 2 }
             };
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    Console.Write(matNumFour[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(matNumFour, numRowsFour, numColumnFour);
 
+            int numRowsFive = 3;
+            int numColumnFive = 3;
             int[,] matNumFive =
             {
                 {2, 1, 4 },
@@ -86,15 +69,10 @@ namespace MatrixMultiplication
                 {4, 3, 6 }
             };
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(matNumFour[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(matNumFive, numRowsFive, numColumnFive);
 
+            int numRowsSix = 3;
+            int numColumnSix = 3;
             int[,] matNumSix =
             {
                 {9, 8, 7 },
@@ -102,29 +80,19 @@ namespace MatrixMultiplication
                 {3, 2, 1 }
             };
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(matNumFive[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(matNumSix, numRowsSix, numColumnSix);
 
+            int numRowsSeven = 1;
+            int numColumnSeven = 5;
             int[,] matNumSeven =
             {
                 {7, 6, 7, 5, 3 }
             };
 
-            for (int i = 0; i < 1; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    Console.Write(matNumSeven[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(matNumSeven, numRowsSeven, numColumnSeven);
 
+            int numRowsEight = 5;
+            int numColumnEight = 1;
             int[,] matNumEight =
             {
                 {4 },
@@ -134,39 +102,23 @@ namespace MatrixMultiplication
                 {5 }
             };
 
-            for (int i = 0; i < 5; i++)
+            WriteMatrix(matNumEight, numRowsEight, numColumnEight);
+
+            int MultRows = 0;
+            int multColumn = 0;
+            int[,] sumMat = new int[0, 0];
+            for (int i = 0; i < 0; i++)
             {
-                for (int j = 0; j < 1; j++)
+                for (int j = 0; j < 0; j++)
                 {
-                    Console.Write(matNumEight[i, j]);
-                }
-                Console.WriteLine();
-            }
-
-            int[,] sumMat = new int[5, 3];
-            for (int i = 0; i < 3; i++)
-
-            {
-                for (int j = 0; j < 3; j++)
-                {
-
                     {
                         sumMat[0, 0] = matNumFive[0, 0] * matNumSix[0, 0] + matNumFive[0, 1] * matNumSix[1, 0] + matNumFive[0, 2] * matNumSix[2, 0];
                     }
                 }
             }
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write("{0} ", sumMat[0, 0]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(sumMat, MultRows, multColumn);
 
             Console.ReadKey();
-
         }
     }
 }
