@@ -17,9 +17,9 @@ namespace MatrixMultiplication
             }
 
         }
-        static void MultipMatrices(int[,] firstMatrix, int[,] secondMatrix, int numRows, int numColums, int k)
+        static void MultiplyMatrices(int[,] firstMatrix, int [,] secondMatrix, int firstRows, int firstColums, int secondRows, int secondColums, int k = 0)
         {
-           
+
         }
         static void Main(string[] args)
         {
@@ -34,6 +34,7 @@ namespace MatrixMultiplication
 
             WriteMatrix(matNumOne, numRowsOne, numColumsOne);
 
+
             int numRowsTwo = 1;
             int numColumsTwo = 3;
             int[,] matNumTwo = new int[1, 3];
@@ -42,6 +43,7 @@ namespace MatrixMultiplication
             matNumTwo[0, 2] = 9;
 
             WriteMatrix(matNumTwo, numRowsTwo, numColumsTwo);
+            MultiplyMatrices(matNumOne, matNumTwo, numRowsOne, numColumsOne, numRowsTwo, numColumsTwo);
 
             int numRowsThree = 2;
             int numColumsThree = 3;
