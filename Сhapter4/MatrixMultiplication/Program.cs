@@ -19,7 +19,11 @@ namespace MatrixMultiplication
         }
         static void MultiplyMatrices(int[,] firstMatrix,int firstRows, int firstColums, int [,] secondMatrix, int secondRows, int secondColums)
         {
-
+            if (firstColums != secondRows)
+            {
+                Console.WriteLine("Validation error.invalid matrices size");
+                return;
+            }
         }
         static void Main(string[] args)
         {
@@ -43,7 +47,7 @@ namespace MatrixMultiplication
             matNumTwo[0, 2] = 9;
 
             WriteMatrix(matNumTwo, numRowsTwo, numColumsTwo);
-            MultiplyMatrices(matNumOne, matNumTwo, numRowsOne, numColumsOne, numRowsTwo, numColumsTwo);
+            MultiplyMatrices(matNumOne, numRowsOne, numColumsOne, matNumTwo, numRowsTwo, numColumsTwo);
 
             int numRowsThree = 2;
             int numColumsThree = 3;
