@@ -35,7 +35,7 @@ namespace MatrixMultiplication
                     result[i, j] = 0;
                 }
             }
-            WriteMatrix(result, firstRows, firstColums);
+            WriteMatrix(result, firstRows, secondColums);
         }
         static void Main(string[] args)
         {
