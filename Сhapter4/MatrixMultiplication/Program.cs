@@ -4,13 +4,13 @@ namespace MatrixMultiplication
 {
     class Program
     {
-        static void WriteMatrix(int[,] matNumOne, int numRows , int numColums)
+        static void WriteMatrix(int[,] matrix, int numRows , int numColums)
         {
             for(int i = 0; i < numRows; i++)
             {
                 for(int j = 0; j < numColums; j++)
                 {
-                    Console.Write(matNumOne[i, j]);
+                    Console.Write(matrix[i, j]);
                 }
                 Console.WriteLine();
 
