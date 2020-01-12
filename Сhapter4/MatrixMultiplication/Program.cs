@@ -24,6 +24,26 @@ namespace MatrixMultiplication
                 Console.WriteLine("Validation error.invalid matrices size");
                 return;
             }
+            WriteMatrix(firstMatrix, firstRows, firstColums);
+            WriteMatrix(secondMatrix, secondRows, secondColums);
+
+            int[,] result = new int[firstRows, secondColums];
+            for(int i = 0; i < firstRows; i++)
+            {
+                for(int j = 0; j < secondColums; j++)
+                {
+                    result[i, j] = i * 0;
+                }
+            }
+
+            for(int i = 0; i < firstRows; i++)
+            {
+                for(int j = 0; j < secondColums; j++)
+                {
+                    Console.Write("{0} ", result[i, j]);
+                }
+                Console.WriteLine();
+            }
         }
         static void Main(string[] args)
         {
