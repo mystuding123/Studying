@@ -10,7 +10,7 @@ namespace MatrixMultiplication
             {
                 for(int j = 0; j < numColums; j++)
                 {
-                    Console.Write(matrix[i, j]);
+                    Console.Write("{0} ",matrix[i, j]);
                 }
                 Console.WriteLine();
 
@@ -32,18 +32,10 @@ namespace MatrixMultiplication
             {
                 for(int j = 0; j < secondColums; j++)
                 {
-                    result[i, j] = i * 0;
+                    result[i, j] = 0;
                 }
             }
-
-            for(int i = 0; i < firstRows; i++)
-            {
-                for(int j = 0; j < secondColums; j++)
-                {
-                    Console.Write("{0} ", result[i, j]);
-                }
-                Console.WriteLine();
-            }
+            WriteMatrix(result, firstRows, firstColums);
         }
         static void Main(string[] args)
         {
