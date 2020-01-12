@@ -4,25 +4,34 @@ namespace MatrixMultiplication
 {
     class Program
     {
+        static void WriteMatrix(int[,] matNumOne, int numLenghts , int numColums)
+        {
+            for(int i = 0; i < numLenghts; i++)
+            {
+                for(int j = 0; j < numColums; j++)
+                {
+                    Console.Write(matNumOne[i, j]);
+                }
+                Console.WriteLine();
+
+            }
+
+        }
         static void Main(string[] args)
         {
-
-            int[,] matNumOne = new int[5, 1];
+            int numLenghts = 5;
+            int numColums = 1;
+            int[,] matNumOne = new int[numLenghts, numColums];
             matNumOne[0, 0] = 5;
             matNumOne[1, 0] = 2;
             matNumOne[2, 0] = 4;
             matNumOne[3, 0] = 7;
             matNumOne[4, 0] = 0;
 
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 1; j++)
-                {
-                    Console.Write(matNumOne[i, j]);
-                }
+            WriteMatrix(matNumOne, numLenghts, numColums);
 
-                Console.WriteLine();
-            }
+
+
 
             int[,] matNumTwo = new int[1, 3];
             matNumTwo[0, 0] = 3;
@@ -84,7 +93,6 @@ namespace MatrixMultiplication
                     Console.Write(matNumFour[i, j]);
                 }
                 Console.WriteLine();
-
             }
 
             int[,] matNumSix =
@@ -115,7 +123,6 @@ namespace MatrixMultiplication
                     Console.Write(matNumSeven[i, j]);
                 }
                 Console.WriteLine();
-
             }
 
             int[,] matNumEight =
