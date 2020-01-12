@@ -17,6 +17,10 @@ namespace MatrixMultiplication
             }
 
         }
+        static void MultipMatrices(int[,] firstMatrix, int[,] secondMatrix, int numRows, int numColums, int k)
+        {
+           
+        }
         static void Main(string[] args)
         {
             int numRowsOne = 5;
