@@ -32,7 +32,10 @@ namespace MatrixMultiplication
             {
                 for(int j = 0; j < secondColums; j++)
                 {
-                    result[i, j] = 0;
+                    for (int h = 0; h < firstColums; h++)
+                    {
+                        result[i, j] = firstMatrix[i, h] * secondMatrix[h, j];
+                    }
                 }
             }
             WriteMatrix(result, firstRows, secondColums);
@@ -92,6 +95,7 @@ namespace MatrixMultiplication
             };
 
             WriteMatrix(matNumFive, numRowsFive, numColumnFive);
+
 
             int numRowsSix = 3;
             int numColumnSix = 3;
