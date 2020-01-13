@@ -51,9 +51,6 @@ namespace MatrixMultiplication
             matNumOne[3, 0] = 7;
             matNumOne[4, 0] = 0;
 
-            WriteMatrix(matNumOne, numRowsOne, numColumsOne);
-
-
             int numRowsTwo = 1;
             int numColumsTwo = 3;
             int[,] matNumTwo = new int[1, 3];
@@ -61,7 +58,6 @@ namespace MatrixMultiplication
             matNumTwo[0, 1] = 1;
             matNumTwo[0, 2] = 9;
 
-            WriteMatrix(matNumTwo, numRowsTwo, numColumsTwo);
             MultiplyMatrices(matNumOne, numRowsOne, numColumsOne, matNumTwo, numRowsTwo, numColumsTwo);
 
             int numRowsThree = 2;
@@ -69,10 +65,8 @@ namespace MatrixMultiplication
             int[,] matNumTree =
             {
                 {1, 2, 3 },
-                { 4, 5, 6}
+                {4, 5, 6 }
             };
-
-            WriteMatrix(matNumTree, numRowsThree, numColumsThree);
 
             int numRowsFour = 3;
             int numColumnFour = 4;
@@ -83,7 +77,7 @@ namespace MatrixMultiplication
                 {1, 6, 8, 2 }
             };
 
-            WriteMatrix(matNumFour, numRowsFour, numColumnFour);
+            MultiplyMatrices(matNumTree, numRowsThree, numColumsThree, matNumFour, numRowsFour, numColumnFour);
 
             int numRowsFive = 3;
             int numColumnFive = 3;
@@ -94,9 +88,6 @@ namespace MatrixMultiplication
                 {4, 3, 6 }
             };
 
-            WriteMatrix(matNumFive, numRowsFive, numColumnFive);
-
-
             int numRowsSix = 3;
             int numColumnSix = 3;
             int[,] matNumSix =
@@ -106,7 +97,7 @@ namespace MatrixMultiplication
                 {3, 2, 1 }
             };
 
-            WriteMatrix(matNumSix, numRowsSix, numColumnSix);
+            MultiplyMatrices(matNumFive, numRowsFive, numColumnFive, matNumSix, numRowsSix, numColumnSix);
 
             int numRowsSeven = 1;
             int numColumnSeven = 5;
@@ -114,8 +105,6 @@ namespace MatrixMultiplication
             {
                 {7, 6, 7, 5, 3 }
             };
-
-            WriteMatrix(matNumSeven, numRowsSeven, numColumnSeven);
 
             int numRowsEight = 5;
             int numColumnEight = 1;
@@ -128,21 +117,7 @@ namespace MatrixMultiplication
                 {5 }
             };
 
-            WriteMatrix(matNumEight, numRowsEight, numColumnEight);
-
-            int MultRows = 0;
-            int multColumn = 0;
-            int[,] sumMat = new int[0, 0];
-            for (int i = 0; i < 0; i++)
-            {
-                for (int j = 0; j < 0; j++)
-                {
-                    {
-                        sumMat[0, 0] = matNumFive[0, 0] * matNumSix[0, 0] + matNumFive[0, 1] * matNumSix[1, 0] + matNumFive[0, 2] * matNumSix[2, 0];
-                    }
-                }
-            }
-            WriteMatrix(sumMat, MultRows, multColumn);
+            MultiplyMatrices(matNumSeven, numRowsSeven, numColumnSeven, matNumEight, numRowsEight, numColumnEight);
 
             Console.ReadKey();
         }
