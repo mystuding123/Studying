@@ -34,7 +34,7 @@ namespace MatrixMultiplication
                 {
                     for (int h = 0; h < firstColums; h++)
                     {
-                        result[i, j] = firstMatrix[i, h] * secondMatrix[h, j];
+                        result[i, j] += firstMatrix[i, h] * secondMatrix[h, j];
                     }
                 }
             }
