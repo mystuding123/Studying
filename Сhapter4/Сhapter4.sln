@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter4.Task8", "Chapter4.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter4.Task7", "Chapter4.Task7\Chapter4.Task7.csproj", "{97539520-7832-42F7-B7C9-B717F623796B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixMultiplication", "MatrixMultiplication\MatrixMultiplication.csproj", "{1C83CB76-D12C-4522-81BA-59684AE51EFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixMultiplication", "MatrixMultiplication\MatrixMultiplication.csproj", "{1C83CB76-D12C-4522-81BA-59684AE51EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter4.Task6", "Chapter4.Task6\Chapter4.Task6.csproj", "{440C5532-1C7C-48E4-A650-D850E9EB191F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{1C83CB76-D12C-4522-81BA-59684AE51EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C83CB76-D12C-4522-81BA-59684AE51EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C83CB76-D12C-4522-81BA-59684AE51EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440C5532-1C7C-48E4-A650-D850E9EB191F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440C5532-1C7C-48E4-A650-D850E9EB191F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440C5532-1C7C-48E4-A650-D850E9EB191F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440C5532-1C7C-48E4-A650-D850E9EB191F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
