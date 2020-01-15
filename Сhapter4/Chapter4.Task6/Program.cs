@@ -24,35 +24,45 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        static void SumRowsArray(int[] firstArray, int[] secondArray, int[,] matrix, int numRows, int numColumn)
+        static void WriteArray(int [] sumRowsArray, int [] sumColumnArray, int numRows, int numColumn)
+        {
+            for(int i = 0; i < numRows; i++ )
+            {
+                Console.Write("Sum rows = {0 } ", sumRowsArray[i]);
+                Console.WriteLine();
+            }
+            for (int i = 0; i < numColumn; i++)
+            {
+                Console.Write("Sum Array colums = {0 }", sumColumnArray[i]);
+                Console.WriteLine();
+            }
+        }
+        static void SumRowsArray(int[] sumRowsArray, int[] sumColumsArray, int[,] matrix, int numRows, int numColumn)
         {
             for (int i = 0; i < numColumn; i++)
             {
                 for (int j = 0; j < numRows; j++)
                 {
-                    firstArray[i] += matrix[j, i];
+                    sumRowsArray[i] += matrix[j, i];
                 }
-                Console.Write("Sum rows = {0 } ", firstArray[i]);
             }
-            Console.WriteLine();
+
             for (int i = 0; i < numRows; i++)
             {
                 for (int j = 0; j < numColumn; j++)
                 {
-                    secondArray[i] += matrix[i, j];
+                    sumColumsArray[i] += matrix[i, j];
                 }
-                Console.Write("Sum Array colums = {0 }", secondArray[i]);
             }
-            Console.WriteLine();
         }
         static void firstArray()
         {
-            int numColumn = ReadInt("Enter Column");
-            int numLenght = ReadInt("Enter Lenght");
-            int[,] myMatrix;
-            myMatrix = new int[numLenght, numColumn];
+            int numRows = ReadInt("Enter Lenght");
+            int numColumn = ReadInt("Enter column");
 
-            for (int i = 0; i < numLenght; i++)
+            int [,] myMatrix = new int[numRows, numColumn];
+
+            for (int i = 0; i < numRows; i++)
             {
                 for (int j = 0; j < numColumn; j++)
                 {
@@ -60,12 +70,14 @@ namespace Chapter4.Task6
                     myMatrix[i, j] = int.Parse(Console.ReadLine());
                 }
             }
-            WriteMatrix(myMatrix, numLenght, numColumn);
+
+            WriteMatrix(myMatrix, numRows, numColumn);
 
             int[] sumColumsArray = new int[numColumn];
-            int[] sumLenghtArray = new int[numLenght];
+            int[] sumLenghtArray = new int[numRows];
 
-            SumRowsArray(sumColumsArray, sumLenghtArray, myMatrix, numLenght, numColumn);
+            SumRowsArray(sumColumsArray, sumLenghtArray, myMatrix, numRows, numColumn);
+            WriteArray(sumLenghtArray, sumColumsArray, numRows, numColumn);
 
             Console.ReadLine();
         }
