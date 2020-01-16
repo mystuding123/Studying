@@ -24,27 +24,27 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        static void WriteArrays(int [] Array,  int lenghtArray)
+        static void WriteArrays(int [] Array,  int numRows)
         {
-            for (int i = 0; i < lenghtArray; i++)
+            for (int i = 0; i < numRows; i++)
             {
                 Console.Write("Sum rows = {0 } ", Array[i]);
                 Console.WriteLine();
             }
         }
-        static void SumArray(int[] sumRowsArray, int[] sumColumsArray, int[,] matrix)
+        static void SumArrays(int[] sumRowsArray, int[] sumColumsArray, int[,] matrix, int numRows, int numColumn)
         {
-            for (int i = 0; i < sumColumsArray.Length; i++)
+            for (int i = 0; i < numColumn; i++)
             {
-                for (int j = 0; j < sumRowsArray.Length; j++)
+                for (int j = 0; j < numRows; j++)
                 {
                     sumRowsArray[i] += matrix[j, i];
                 }
             }
 
-            for (int i = 0; i < sumRowsArray.Length; i++)
+            for (int i = 0; i < numRows; i++)
             {
-                for (int j = 0; j < sumColumsArray.Length; j++)
+                for (int j = 0; j < numColumn; j++)
                 {
                     sumColumsArray[i] += matrix[i, j];
                 }
@@ -71,7 +71,7 @@ namespace Chapter4.Task6
             int[] sumRowsArray = new int[numRows];
             int[] sumColumsArray = new int[numColumn];
 
-            SumArray(sumColumsArray, sumRowsArray, myMatrix);
+            SumArrays(sumColumsArray, sumRowsArray, myMatrix, numRows, numColumn);
 
             WriteArrays(sumRowsArray, numRows);
             WriteArrays(sumColumsArray, numColumn);
