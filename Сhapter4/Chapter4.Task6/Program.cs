@@ -24,7 +24,7 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        static void WriteArray(int [] sumRowsArray, int [] sumColumnArray, int numRows, int numColumn)
+        static void WriteArrays(int [] sumRowsArray, int [] sumColumnArray, int numRows, int numColumn)
         {
             for(int i = 0; i < numRows; i++ )
             {
@@ -37,7 +37,7 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        static void SumRowsArray(int[] sumRowsArray, int[] sumColumsArray, int[,] matrix, int numRows, int numColumn)
+        static void SumArrays(int[] sumRowsArray, int[] sumColumsArray, int[,] matrix, int numRows, int numColumn)
         {
             for (int i = 0; i < numColumn; i++)
             {
@@ -55,7 +55,7 @@ namespace Chapter4.Task6
                 }
             }
         }
-        static void firstArray()
+        static void TaskWithMatrix()
         {
             int numRows = ReadInt("Enter Lenght");
             int numColumn = ReadInt("Enter column");
@@ -66,25 +66,25 @@ namespace Chapter4.Task6
             {
                 for (int j = 0; j < numColumn; j++)
                 {
-                    Console.WriteLine("Enter [{0},{1}] num", i + 1, j + 1);
-                    myMatrix[i, j] = int.Parse(Console.ReadLine());
+                    int myInt = ReadInt("Enter num");
+                    myMatrix[i, j] = myInt;
                 }
             }
 
             WriteMatrix(myMatrix, numRows, numColumn);
 
             int[] sumColumsArray = new int[numColumn];
-            int[] sumLenghtArray = new int[numRows];
+            int[] sumRowsArray = new int[numRows];
 
-            SumRowsArray(sumColumsArray, sumLenghtArray, myMatrix, numRows, numColumn);
-            WriteArray(sumLenghtArray, sumColumsArray, numRows, numColumn);
+            SumArrays(sumColumsArray, sumRowsArray, myMatrix, numRows, numColumn);
+            WriteArrays(sumRowsArray, sumColumsArray, numRows, numColumn);
 
             Console.ReadLine();
         }
 
         static void Main(string[] args)
         {
-            firstArray();
+            TaskWithMatrix();
             Console.ReadKey();
         }
     }
