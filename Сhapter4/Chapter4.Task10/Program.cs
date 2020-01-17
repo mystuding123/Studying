@@ -10,11 +10,11 @@ namespace Chapter4.Task10
         {
             Console.WriteLine("Enter your number");
 
-                Nullable<int> a = new Nullable<int>(1);
-                Nullable<int> b = null;
-                Nullable<int> c = new Nullable<int>(2);
+            int? a = 2;
+            int? b = null;
+            int? c = 1;
 
-                Nullable<int>[] array = { a, b, c };
+            int?[] array = { a, b, c };
             foreach (int? num in array)
             {
                 if (num.HasValue)
@@ -26,6 +26,7 @@ namespace Chapter4.Task10
                     Console.WriteLine($"If method return null = {0}");
                 }
             }
+
 
         }
     }
