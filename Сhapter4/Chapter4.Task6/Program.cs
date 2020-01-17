@@ -37,57 +37,50 @@ namespace Chapter4.Task6
 
         static void SumArrays(out int[] sumRowsArrays, out int[] sumColumsArray, int numColumn, int numRows, int[,] matrix)
         {
-            sumRowsArrays = new int[numColumn];
-            sumColumsArray = new int[numRows];
+            sumRowsArrays = new int[numRows];
+            sumColumsArray = new int[numColumn];
             for (int i = 0; i < numColumn; i++)
             {
                 for (int j = 0; j < numRows; j++)
                 {
-                    sumRowsArrays[i] += matrix[j, i];
-                }
-            }
-
-            for (int i = 0; i < numRows; i++)
-            {
-                for (int j = 0; j < numColumn; j++)
-                {
-                    sumColumsArray[i] += matrix[i, j];
+                    sumRowsArrays[j] += matrix[j, i];
+                    sumColumsArray[i] += matrix[j, i];
                 }
             }
         }
-
         static void TaskWithMatrix()
-        {
-            int numRows = ReadInt("Enter Lenght");
-            int numColumn = ReadInt("Enter column");
-
-            int[,] myMatrix = new int[numRows, numColumn];
-
-            for (int i = 0; i < numRows; i++)
             {
-                for (int j = 0; j < numColumn; j++)
+                int numRows = ReadInt("Enter Lenght");
+                int numColumn = ReadInt("Enter column");
+
+                int[,] myMatrix = new int[numRows, numColumn];
+
+                for (int i = 0; i < numRows; i++)
                 {
-                    myMatrix[i, j] = ReadInt($"Enter[{i + 1}, {j + 1}] num");
+                    for (int j = 0; j < numColumn; j++)
+                    {
+                        myMatrix[i, j] = ReadInt($"Enter[{i + 1}, {j + 1}] num");
+                    }
                 }
+
+                WriteMatrix(myMatrix, numRows, numColumn);
+
+                SumArrays(out int[] sumRowsArray, out int[] sumColumsArray, numColumn, numRows, myMatrix);
+
+                Console.WriteLine("Rows sum");
+                WriteArray(sumRowsArray);
+
+                Console.WriteLine("Column sum");
+                WriteArray(sumColumsArray);
+
+                Console.ReadLine();
             }
 
-            WriteMatrix(myMatrix, numRows, numColumn);
-
-            SumArrays(out int [] sumRowsArray, out int [] sumColumsArray, numColumn, numRows, myMatrix);
-
-            Console.WriteLine("Rows sum");
-            WriteArray(sumRowsArray);
-
-            Console.WriteLine("Column sum");
-            WriteArray(sumColumsArray);
-
-            Console.ReadLine();
-        }
-
-        static void Main(string[] args)
-        {
-            TaskWithMatrix();
-            Console.ReadKey();
+            static void Main(string[] args)
+            {
+                TaskWithMatrix();
+                Console.ReadKey();
+            }
         }
     }
-}
+
