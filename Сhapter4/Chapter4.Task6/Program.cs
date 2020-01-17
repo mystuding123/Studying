@@ -67,7 +67,7 @@ namespace Chapter4.Task6
             {
                 for (int j = 0; j < numColumn; j++)
                 {
-                    myMatrix[i, j] = ReadInt(string.Format($"Enter[{i + 1}, {j + 1}] num"));
+                    myMatrix[i, j] = ReadInt($"Enter[{i + 1}, {j + 1}] num");
                 }
             }
 
