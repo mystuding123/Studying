@@ -20,7 +20,7 @@ namespace Chapter4.Task6
             {
                 for (int j = 0; j < numColums; j++)
                 {
-                    Console.Write("{0 } ", matrix[i, j]);
+                    Console.Write($"{matrix[i, j]} ");
                 }
                 Console.WriteLine();
             }
@@ -30,7 +30,7 @@ namespace Chapter4.Task6
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.Write("{0} ", array[i]);
+                Console.Write($"{array[i]} ");
             }
             Console.WriteLine();
         }
@@ -67,7 +67,7 @@ namespace Chapter4.Task6
             {
                 for (int j = 0; j < numColumn; j++)
                 {
-                    myMatrix[i, j] = ReadInt(string.Format("Enter[{0}, {1}] num", i + 1, j + 1));
+                    myMatrix[i, j] = ReadInt(string.Format($"Enter[{i + 1}, {j + 1}] num"));
                 }
             }
 
