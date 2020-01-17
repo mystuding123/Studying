@@ -30,7 +30,7 @@ namespace Chapter4.Task6
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.Write(array[i]);
+                Console.Write("{0} ", array[i]);
             }
             Console.WriteLine();
         }
