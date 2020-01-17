@@ -13,6 +13,7 @@ namespace Chapter4.Task6
 
             return num;
         }
+
         static void WriteMatrix(int[,] matrix, int numRows, int numColums)
         {
             for (int i = 0; i < numRows; i++)
@@ -24,7 +25,8 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        static void WriteArray(int [] Array)
+
+        static void WriteArray(int[] Array)
         {
             for (int i = 0; i < Array.Length; i++)
             {
@@ -32,14 +34,16 @@ namespace Chapter4.Task6
                 Console.WriteLine();
             }
         }
-        public static void SumArrays(ref int[] sumRowsArray, ref int[] sumColumsArray, int[,] matrix, int numRows, int numColumn)
-        {
 
+        static void SumArrays(out int[] sumRowsArrays, out int[] sumColumsArray, int numColumn, int numRows, int[,] matrix)
+        {
+            sumRowsArrays = new int[numColumn];
+            sumColumsArray = new int[numRows];
             for (int i = 0; i < numColumn; i++)
             {
                 for (int j = 0; j < numRows; j++)
                 {
-                    sumRowsArray[i] += matrix[j, i];                                      
+                    sumRowsArrays[i] += matrix[j, i];
                 }
             }
 
@@ -51,12 +55,13 @@ namespace Chapter4.Task6
                 }
             }
         }
+
         static void TaskWithMatrix()
         {
             int numRows = ReadInt("Enter Lenght");
             int numColumn = ReadInt("Enter column");
 
-            int [,] myMatrix = new int[numRows, numColumn];
+            int[,] myMatrix = new int[numRows, numColumn];
 
             for (int i = 0; i < numRows; i++)
             {
@@ -69,11 +74,10 @@ namespace Chapter4.Task6
 
             WriteMatrix(myMatrix, numRows, numColumn);
 
-            int[] sumRowsArray = new int[numRows];
-            int[] sumColumsArray = new int[numColumn];
+            int[] sumRowsArray;
+            int[] sumColumsArray;
 
-            SumArrays(ref sumRowsArray, ref sumColumsArray, myMatrix, numRows, numColumn);
-
+            SumArrays(out sumRowsArray, out sumColumsArray, numColumn, numRows, myMatrix);
 
             WriteArray(sumRowsArray);
             WriteArray(sumColumsArray);
