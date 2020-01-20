@@ -16,7 +16,7 @@ namespace Chapter4.Task10
                 }
                 else
                 {
-                    Console.WriteLine($"ethod return {0} ");
+                    Console.WriteLine("Method return 0");
                 }
             }
         }
