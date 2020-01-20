@@ -16,7 +16,7 @@ namespace Chapter4.Task10
                 }
                 else
                 {
-                    Console.WriteLine($"Method return {0} ");
+                    Console.WriteLine($"ethod return {0} ");
                 }
             }
         }
@@ -25,7 +25,7 @@ namespace Chapter4.Task10
             foreach(int? num in array)
             {
                 int? m = num;
-                int? obj = m ?? null;
+                int obj = m ?? 0;
                 Console.WriteLine($"Method return {obj} ");
             }
         }
@@ -39,6 +39,7 @@ namespace Chapter4.Task10
 
             FirstMethod(array);
             SecondMethod(array);
+
 
             Console.ReadLine();
         }
