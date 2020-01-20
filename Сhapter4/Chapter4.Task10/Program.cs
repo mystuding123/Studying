@@ -6,15 +6,8 @@ namespace Chapter4.Task10
     class Program
     {
 
-        static void Main(string[] args)
+        static void FirstMethod(int?[] array)
         {
-            Console.WriteLine("Enter your number");
-
-            int? a = 2;
-            int? b = null;
-            int? c = 1;
-
-            int?[] array = { a, b, c };
             foreach (int? num in array)
             {
                 if (num.HasValue)
@@ -23,11 +16,34 @@ namespace Chapter4.Task10
                 }
                 else
                 {
-                    Console.WriteLine($"If method return null = {0}");
+                    Console.WriteLine($"If method return {null} null = {0}");
                 }
             }
+        }
+        static void SecondMethod(int?[] array)
+        {
+            foreach(int? num in array)
+            {
+                int? m = num;
+                int? obj = m ?? 0;
+                Console.WriteLine($"Method return {obj} ");
+            }
+        }
 
 
+        static void Main(string[] args)
+        {
+            int? a = 2;
+            int? b = null;
+            int? c = 1;
+
+            int?[] array = { a, b, c };
+            {
+                FirstMethod(array);
+                SecondMethod(array);
+            }
+
+            Console.ReadLine();
         }
     }
 }
