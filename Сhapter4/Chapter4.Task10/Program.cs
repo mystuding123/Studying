@@ -12,11 +12,11 @@ namespace Chapter4.Task10
             {
                 if (num.HasValue)
                 {
-                    Console.WriteLine($"If method return number = {num.Value}");
+                    Console.WriteLine($"Method return number = {num.Value}");
                 }
                 else
                 {
-                    Console.WriteLine($"If method return {null} null = {0}");
+                    Console.WriteLine($"Method return {0} ");
                 }
             }
         }
@@ -25,12 +25,10 @@ namespace Chapter4.Task10
             foreach(int? num in array)
             {
                 int? m = num;
-                int? obj = m ?? 0;
+                int? obj = m ?? null;
                 Console.WriteLine($"Method return {obj} ");
             }
         }
-
-
         static void Main(string[] args)
         {
             int? a = 2;
@@ -38,10 +36,9 @@ namespace Chapter4.Task10
             int? c = 1;
 
             int?[] array = { a, b, c };
-            {
-                FirstMethod(array);
-                SecondMethod(array);
-            }
+
+            FirstMethod(array);
+            SecondMethod(array);
 
             Console.ReadLine();
         }
