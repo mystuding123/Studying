@@ -30,6 +30,12 @@ namespace Chapter4.Task9
 
             public int P;
             public int S;
+            public Point GetPoint(Point A, Point C)
+            {
+                Point B = new Point(A.X, C.Y);
+                return B;
+            }
+
             public void GetHeight(Point B, Point A)
             {
                 Height = (B.X - A.X) + (B.Y - A.Y);
@@ -61,12 +67,14 @@ namespace Chapter4.Task9
             C.Display();
 
             Rectangle rect = new Rectangle();
-            Point B = new Point(A.X, C.Y);
+            Point B = rect.GetPoint(A, C);
+
             rect.bottomLeft = A;
             rect.topRight = C;
 
             rect.GetHeight(B, A);
             rect.GetWidth(C, B);
+
             rect.GetSquare();
             rect.GetPerimetr();
 
