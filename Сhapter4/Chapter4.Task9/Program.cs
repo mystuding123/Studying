@@ -25,10 +25,29 @@ namespace Chapter4.Task9
         {
             public Point topRight;
             public Point bottomLeft;
-            public Point topLeft;
-            public Point bottomRight;
+            public int Height;
+            public int Width;
+
             public int P;
             public int S;
+            public void GetHeight(Point B, Point A)
+            {
+                Height = (B.X - A.X) + (B.Y - A.Y);
+                
+            }
+            public void GetWidth(Point C, Point B)
+            {
+                Width = (C.X - B.X) + (C.Y - B.Y);
+            }
+            public void GetPerimetr()
+            {
+                P = 2 * (Height + Width);
+            }
+            public void GetSquare()
+            {
+
+                S = Height * Width;
+            }
             public void DisplayRect()
             {
                 Console.WriteLine($"Perimetr = {P},Square = { S}");
@@ -42,24 +61,16 @@ namespace Chapter4.Task9
             C.Display();
 
             Rectangle rect = new Rectangle();
-
             Point B = new Point(A.X, C.Y);
-            Point D = new Point(C.X, A.Y);
-
             rect.bottomLeft = A;
             rect.topRight = C;
-            rect.topLeft = B;
-            rect.bottomRight = D;
 
-            int Height = (B.X - A.X) + (B.Y - A.Y);
-            int Width = (C.X - B.X) + (C.Y - B.Y);
-
-            rect.P = 2 * (Height + Width);
-            rect.S = Height * Width;
+            rect.GetHeight(B, A);
+            rect.GetWidth(C, B);
+            rect.GetSquare();
+            rect.GetPerimetr();
 
             rect.DisplayRect();
-
-
         }
     }
 }
