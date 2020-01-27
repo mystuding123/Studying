@@ -36,7 +36,7 @@ namespace Chapter4.Task9
             }
             public void CalculateHeight(Point A, Point C)
             {
-                Height = C.Y - A.X;
+                Height = C.Y - A.Y;
 
                 Console.WriteLine($"Height rectangle = {Height}");
             }
