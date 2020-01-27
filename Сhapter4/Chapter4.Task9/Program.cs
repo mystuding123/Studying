@@ -29,27 +29,20 @@ namespace Chapter4.Task9
             public int Width;
 
 
-            public void CreateRectangle()
+            public void CreateRectangle(Point A, Point C)
             {
-                Point A = new Point(2, 4);
-                A.Display();
-                Point C = new Point(21, 17);
-                C.Display();
-                Point B = new Point(A.X, C.Y);
-
-                CalculateHeight(A, B);
+                CalculateHeight(A, C);
                 CalculateWidth(C, A);
-
             }
-            public void CalculateHeight(Point A, Point B)
+            public void CalculateHeight(Point A, Point C)
             {
-                Height = B.Y - A.Y;
+                Height = C.Y - A.X;
 
                 Console.WriteLine($"Height rectangle = {Height}");
             }
-            public void CalculateWidth(Point C, Point B)
+            public void CalculateWidth(Point C, Point A)
             {
-                Width = C.X - B.X;
+                Width = C.X - A.X;
                 Console.WriteLine($"Width rectangle = {Width}");
             }
             public void GetPerimetr()
@@ -66,9 +59,14 @@ namespace Chapter4.Task9
         }
         static void Main(string[] args)
         {
+            Point A = new Point(2, 4);
+            A.Display();
+            Point C = new Point(21, 17);
+            C.Display();
+
             Rectangle rect = new Rectangle();
 
-            rect.CreateRectangle();
+            rect.CreateRectangle(A, C);
             rect.GetSquare();
             rect.GetPerimetr();
         }
