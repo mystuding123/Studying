@@ -23,14 +23,14 @@ namespace Chapter4.Task9
         }
         struct Rectangle
         {
-            public Point topRight;
-            public Point bottomLeft;
             public int Height;
             public int Width;
 
 
             public void CreateRectangle(Point A, Point C)
             {
+                Point topRight = A;
+                Point bottomLeft = C;
                 CalculateHeight(A, C);
                 CalculateWidth(C, A);
             }
