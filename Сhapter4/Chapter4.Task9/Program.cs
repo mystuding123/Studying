@@ -23,30 +23,16 @@ namespace Chapter4.Task9
         }
         struct Rectangle
         {
-            public Point topRight;
-            public Point bottomLeft;
             public int Height;
             public int Width;
 
 
             public void CreateRectangle(Point C, Point A)
             {
-                topRight = C;
-                bottomLeft = A;
-                CalculateHeight();
-                CalculateWidth();
+                Height = C.Y - A.Y;
+                Width = C.X - A.X;
             }
-            public void CalculateHeight()
-            {
-                Height = topRight.Y - bottomLeft.Y;
 
-                Console.WriteLine($"Height rectangle = {Height}");
-            }
-            public void CalculateWidth()
-            {
-                Width = topRight.X - bottomLeft.X;
-                Console.WriteLine($"Width rectangle = {Width}");
-            }
             public void GetPerimetr()
             {
                 int P = 2 * (Height + Width);
