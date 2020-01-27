@@ -31,7 +31,8 @@ namespace Chapter4.Task9
 
             public void CreateRectangle(Point A, Point C)
             {
-
+                topRight = C;
+                bottomLeft = A;
                 CalculateHeight(A, C);
                 CalculateWidth(C, A);
             }
