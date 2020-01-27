@@ -28,38 +28,41 @@ namespace Chapter4.Task9
             public int Height;
             public int Width;
 
-            public int P;
-            public int S;
-
-            public Point CreateRectangle(Point A, Point C)
+            public Point CreateNewPoint(Point A, Point C)
             {
                 bottomLeft = A;
                 topRight = C;
                 Point B = new Point(A.X, C.Y);
                 return B;
             }
-            public void GetHeight(Point A, Point C)
+            public void CreateRectangle(Point A, Point C)
             {
-                Point B = CreateRectangle(A, C);
+                CalculateHeight(A, C);
+                CalculateWidth(C, A);
+
+            }
+            public void CalculateHeight(Point A, Point C)
+            {
+                Point B = CreateNewPoint(A, C);
                 Height = (B.X - A.X) + (B.Y - A.Y);
 
                 Console.WriteLine($"Height rectangle = {Height}");
             }
-            public void GetWidth(Point C, Point A)
+            public void CalculateWidth(Point C, Point A)
             {
-                Point B = CreateRectangle(A, C);
+                Point B = CreateNewPoint(A, C);
                 Width = (C.X - B.X) + (C.Y - B.Y);
                 Console.WriteLine($"Width rectangle = {Width}");
             }
             public void GetPerimetr()
             {
-                P = 2 * (Height + Width);
+                int P = 2 * (Height + Width);
                 Console.WriteLine($"Perimetr rectangle = {P}");
             }
             public void GetSquare()
             {
 
-                S = Height * Width;
+                int S = Height * Width;
                 Console.WriteLine($"Square rectangle = {S}");
             }
         }
@@ -72,9 +75,7 @@ namespace Chapter4.Task9
 
             Rectangle rect = new Rectangle();
 
-            rect.GetHeight(A, C);
-            rect.GetWidth(C, A);
-
+            rect.CreateRectangle(A, C);
             rect.GetSquare();
             rect.GetPerimetr();
         }
