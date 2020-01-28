@@ -7,52 +7,49 @@ namespace Chapter4.Task9
     {
         struct Point
         {
-            public int x;
-            public int y;
+            public int X;
+            public int Y;
 
             public Point(int xPos, int yPos)
             {
-                x = xPos;
-                y = yPos;
+                X = xPos;
+                Y = yPos;
             }
-
             public void Display()
             {
-                Console.WriteLine($"x = {x}, y = {y}");
+                Console.WriteLine($"x = {X}, y = {Y}");
             }
         }
         struct Rectangle
         {
-            public int height;
-            public int width;
+            public int Height;
+            public int Width;
 
             public Rectangle(Point a, Point c)
             {
-                height = c.y - a.y;
-                width = c.x - a.x;
+                Height = c.Y - a.Y;
+                Width = c.X - a.X;
             }
-
             public void GetPerimetr()
             {
-                int P = 2 * (height + width);
+                int P = 2 * (Height + Width);
                 Console.WriteLine($"Perimetr rectangle = {P}");
             }
-
             public void GetSquare()
             {
-                int S = height * width;
+                int S = Height * Width;
                 Console.WriteLine($"Square rectangle = {S}");
             }
         }
         static void Main(string[] args)
         {
-            Point A = new Point(2, 4);
-            A.Display();
-            Point C = new Point(21, 17);
-            C.Display();
+            Point a = new Point(2, 4);
+            a.Display();
+            Point c = new Point(21, 17);
+            c.Display();
 
-            Rectangle rect = new Rectangle(A, C);
-            
+            Rectangle rect = new Rectangle(a, c);
+           
             rect.GetSquare();
             rect.GetPerimetr();
         }
